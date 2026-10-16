@@ -2,8 +2,42 @@ title: 我的技术博客
 description: C++ 服务端 / 中间件 · 刷题与技术笔记
 author: 你的名字
 theme: minima
+lang: zh-CN
 
 # ↓ 关键：仓库叫 blog 就填 "/blog"；仓库叫 用户名.github.io 就填空字符串 ""
-baseurl: "/blog"
-url: "https://你的用户名.github.io"
+baseurl: ""
+url: "https://lmrbbch.github.io"
 timezone: Asia/Shanghai
+
+# ============================================================
+# 两个内容大类，各自是一个 collection
+# ------------------------------------------------------------
+# 为什么用 collection 而不是 _posts：
+#   1. URL 不带日期，题解是长期维护的资产
+#   2. 每个大类有独立列表页，互不干扰
+#   3. 无需插件，GitHub Pages 原生支持
+#
+# permalink 里的 :collection 会展开成集合名，:title 是文件名去掉 .md：
+#   _leetcode/0001-two-sum.md  ->  /leetcode/0001-two-sum/
+#   _projects/myproject-overview.md ->  /projects/myproject-overview/
+# 文件名约定：不要加日期前缀。不带日期就不会被渲染成页面，
+# 所以 TEMPLATE-no-date.md 可以安全地放在同目录当模板。
+# ============================================================
+collections:
+  leetcode:
+    output: true
+    permalink: /:collection/:title/
+  projects:
+    output: true
+    permalink: /:collection/:title/
+
+# 站点没有 _posts：显式禁用分页，否则 jekyll-paginate 会因找不到 posts 而构建失败
+paginate: null
+
+# minima 主题皮肤，可选：classic / dark / solarized / auto
+minima:
+  skin: auto
+
+# 让 ## / ### 标题生成锚点 id，方便长文跳转
+kramdown:
+  toc_levels: 2..3

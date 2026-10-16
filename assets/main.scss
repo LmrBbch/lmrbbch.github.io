@@ -1,0 +1,92 @@
+---
+# 覆盖 minima 主题的样式入口。这个文件必须保留上面两行 ---，
+# Jekyll 才会把它当 SCSS 处理并输出成 /assets/main.css
+---
+
+@import "minima";
+
+// ============================================================
+// 难度徽章：leetcode.md 列表页用 <span class="badge badge-easy"> 调用
+// 颜色取自 GitHub Primer，浅色/深色背景下都能看清
+// ============================================================
+.badge {
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.badge-easy {
+  color: #1a7f37;
+  background-color: #dafbe1;
+}
+
+.badge-medium {
+  color: #9a6700;
+  background-color: #fff8c5;
+}
+
+.badge-hard {
+  color: #cf222e;
+  background-color: #ffebe9;
+}
+
+// ============================================================
+// 列表页表格：窄屏下也别撑破版面
+// ============================================================
+.problem-table {
+  width: 100%;
+  table-layout: fixed;
+
+  th:nth-child(2),
+  td:nth-child(2) {
+    width: 4.5rem;
+    text-align: center;
+  }
+
+  td:first-child {
+    word-break: break-word;
+  }
+}
+
+// 表格里的标签文字（复用 minima 的 .post-meta 灰色小字风格）
+.tag-list {
+  font-size: 13px;
+  color: #828282;
+}
+
+// ============================================================
+// 项目分区：projects.md 里每个项目一个区块
+// ============================================================
+.project-section {
+  margin-bottom: 2.25rem;
+
+  h2 {
+    margin-bottom: 0.35rem;
+  }
+}
+
+.project-section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  border-bottom: 1px solid #e8e8e8;
+  margin-bottom: 0.75rem;
+
+  h2 {
+    margin: 0;
+    border: 0;
+    padding-bottom: 0;
+  }
+
+  .chapter-count {
+    font-size: 13px;
+    color: #828282;
+    white-space: nowrap;
+  }
+}
