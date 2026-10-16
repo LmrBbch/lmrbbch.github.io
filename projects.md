@@ -6,11 +6,12 @@ permalink: /projects/
 
 按项目分组，组内按 `order` 排序。一个部分一篇，文件放在 `_projects/` 目录下。
 
-{%- assign slugs = site.projects | map: "project" | uniq %}
+{%- assign live = site.projects | where_exp: "item", "item.published != false" %}
+{%- assign slugs = live | map: "project" | uniq %}
 
-共 **{{ slugs | size }}** 个项目、**{{ site.projects | size }}** 篇文章。
+共 **{{ slugs | size }}** 个项目、**{{ live | size }}** 篇文章。
 {% for slug in slugs %}
-{%- assign chapters = site.projects | where_exp: "item", "item.project == slug" | sort: "order" %}
+{%- assign chapters = live | where_exp: "item", "item.project == slug" | sort: "order" %}
 {%- assign head = chapters | first %}
 
 <section class="project-section">

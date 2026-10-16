@@ -1,16 +1,25 @@
 ---
 layout: page
-title: "我的项目 · 整体设计"
-project: myproject
-project_name: 我的项目名
+title: "模板 · 项目单篇"
+published: false
+permalink: /templates/projects/
+project: TEMPLATE
+project_name: 模板
 order: 1
-section: 整体设计
+section: 模板
 tags: [架构, C++]
 ---
 
-> **这是模板文件，不会被渲染成页面**（文件名不含日期，permalink 也不匹配文件名）。
+> **这是模板文件，不会出现在列表页，也不该保留 `published: false` 和上面那个
+> `permalink`。**
+>
 > 用法：复制一份改名为 `<项目slug>-<章节slug>.md`，例如 `myproject-overview.md`，
-> 再改掉下面的 front matter。**文件名必须不含日期**，否则 URL 不是你期望的样子。
+> 然后**删掉 `published: false` 和 `permalink` 这两行**，再改掉 `project` /
+> `project_name` / `order` / `section`。
+>
+> 同一个项目的多篇共用同一个 `project`（英文 slug，定了就别改），
+> `project_name` 是列表页上的显示名，`order` 决定项目内的阅读顺序。
+> 文件名不要带日期前缀，否则 URL 里会带上日期。
 
 ## 本部分要解决的问题
 

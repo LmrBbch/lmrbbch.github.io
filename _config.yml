@@ -20,8 +20,12 @@ timezone: Asia/Shanghai
 # permalink 里的 :collection 会展开成集合名，:title 是文件名去掉 .md：
 #   _leetcode/0001-two-sum.md  ->  /leetcode/0001-two-sum/
 #   _projects/myproject-overview.md ->  /projects/myproject-overview/
-# 文件名约定：不要加日期前缀。不带日期就不会被渲染成页面，
-# 所以 TEMPLATE-no-date.md 可以安全地放在同目录当模板。
+# 文件名约定：不要加日期前缀。
+#
+# 关于集合里的模板文件：collection 文档即使文件名不含日期，Jekyll 也会用文件的
+# 修改时间当日期，照样生成一个页面。所以「不带日期就不会被渲染」这个说法对
+# collection 是错的，模板必须靠 front matter 的 `published: false` 显式排除——
+# 两个列表页都已经用 where_exp 过滤掉了。删掉那个字段就会立刻泄漏成公开页面。
 # ============================================================
 collections:
   leetcode:

@@ -6,12 +6,12 @@ permalink: /leetcode/
 
 按难度分组，组内按题号排序。每道题一个文件，放在 `_leetcode/` 目录下。
 
-{%- assign easy = site.leetcode | where: "difficulty", "easy" | sort: "num" %}
-{%- assign medium = site.leetcode | where: "difficulty", "medium" | sort: "num" %}
-{%- assign hard = site.leetcode | where: "difficulty", "hard" | sort: "num" %}
+{%- assign easy = site.leetcode | where_exp: "item", "item.published != false" | where: "difficulty", "easy" | sort: "num" %}
+{%- assign medium = site.leetcode | where_exp: "item", "item.published != false" | where: "difficulty", "medium" | sort: "num" %}
+{%- assign hard = site.leetcode | where_exp: "item", "item.published != false" | where: "difficulty", "hard" | sort: "num" %}
 {%- assign groups = "easy,medium,hard" | split: "," %}
 
-共收录 **{{ site.leetcode | size }}** 题。
+共收录 **{{ site.leetcode | where_exp: "item", "item.published != false" | size }}** 题。
 {% for key in groups %}
 {%- if key == "easy" %}
 {%- assign list = easy %}

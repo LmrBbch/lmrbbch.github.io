@@ -1,0 +1,9 @@
+---
+layout: null
+permalink: /robots.txt
+---
+User-agent: *
+Allow: /
+
+# 模板文件不进列表页，但 URL 可以被猜到，所以这里也挡一道
+Disallow: /templates/

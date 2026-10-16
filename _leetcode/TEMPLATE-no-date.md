@@ -1,14 +1,24 @@
 ---
 layout: page
-title: "1. 两数之和"
+title: "模板 · 两数之和"
+published: false
+permalink: /templates/leetcode/
 num: 1
 difficulty: easy
 tags: [数组, 哈希表]
 source: https://leetcode.cn/problems/two-sum/
 ---
 
-> **这是模板文件，不会被渲染成页面**（文件名不含日期）。
-> 用法：复制一份改名为 `0001-two-sum.md`，再改掉下面的 `title` / `num` / `tags`。
+> **这是模板文件，不会出现在列表页，也不该保留 `published: false` 和上面那个
+> `permalink`。**
+>
+> 用法：复制一份改名为 `0001-two-sum.md`（题号补零到 4 位 + 英文 slug），
+> 然后**删掉 `published: false` 和 `permalink` 这两行**，再改掉 `title` / `num` /
+> `difficulty` / `tags` / `source`。
+>
+> 文件名不要带日期前缀，否则 URL 里会带上日期。
+> 每一步都别漏了删那两行——留着 `published: false` 的话，你新写的题解不会出现在
+> 列表页里，这是唯一一个需要手动处理的坑。
 
 ## 题目
 
