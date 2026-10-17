@@ -7,7 +7,7 @@ title: 首页
 
 ## 📘 [刷题笔记](/leetcode/)
 
-LeetCode 题解，按难度分组、按题号排序。
+LeetCode 题解，按算法标签分组、组内按题号排序。
 
 已收录 **{{ site.leetcode | where_exp: "item", "item.published != false" | size }}** 题。
 

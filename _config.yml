@@ -26,6 +26,10 @@ timezone: Asia/Shanghai
 # 修改时间当日期，照样生成一个页面。所以「不带日期就不会被渲染」这个说法对
 # collection 是错的，模板必须靠 front matter 的 `published: false` 显式排除——
 # 两个列表页都已经用 where_exp 过滤掉了。删掉那个字段就会立刻泄漏成公开页面。
+#
+# 刷题笔记的分组维度是 front matter 里的 `topics`（可多个），不是难度。
+# 分组、计数、标签索引全部由 leetcode.md 里的 Liquid 从数据推导出来，
+# 这里不需要任何配置；新增标签会自动出现。
 # ============================================================
 collections:
   leetcode:
