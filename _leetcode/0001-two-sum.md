@@ -35,15 +35,7 @@ tags: [数组, 哈希表]
 source: https://leetcode.cn/problems/two-sum/
 ---
 
-> **这是模板文件，不会出现在列表页里。**
->
-> 用法：复制一份改名为 `0001-two-sum.md`（题号补零到 4 位 + 英文 slug），
-> 然后改掉上面的 `title` / `num` / `difficulty` / `tags` / `source`，
-> 并**删掉 `published: false` 那一行**。
->
-> 文件名不要带日期前缀，否则 URL 里会带上日期。
-> 别忘了删 `published: false`——留着的话你自己的题解不会出现在列表页上，
-> 这是唯一一个需要手动处理的坑。
+
 
 ## 题目
 
