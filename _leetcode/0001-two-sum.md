@@ -3,7 +3,7 @@ layout: page
 title: "两数之和"
 num: 1
 difficulty: easy
-topics: [哈希表, 数组]
+topics: [哈希表]
 source: https://leetcode.cn/problems/two-sum/
 ---
 
@@ -13,6 +13,10 @@ source: https://leetcode.cn/problems/two-sum/
 
 - 每种输入只会对应一个答案，同一个元素不能重复使用
 - 可以按任意顺序返回答案
+
+## 用到的知识
+-**pair** 返回一对数用{x，y}，这会返回一个pair
+
 
 ## 思路
 
