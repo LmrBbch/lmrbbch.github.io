@@ -60,6 +60,9 @@ source: https://leetcode.cn/problems/two-sum/
 - 每种输入只会对应一个答案，同一个元素不能重复使用
 - 可以按任意顺序返回答案
 
+## 用到的知识
+-**pair** 返回一对数用{x，y}，这会返回一个pair
+
 ## 思路
 
 **暴力解**：双重循环枚举所有数对，第一层固定 `i`，第二层找 `j > i` 是否满足 `nums[i] + nums[j] == target`。时间 O(n²)。
