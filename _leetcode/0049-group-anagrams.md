@@ -2,7 +2,7 @@
 layout: page
 title: "字母异位词分组"
 num: 49
-topics: [哈希表, 字符串]
+topics: [哈希表]
 difficulty: medium
 source: https://leetcode.cn/problems/group-anagrams/
 ---
